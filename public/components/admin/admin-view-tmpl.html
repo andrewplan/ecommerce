@@ -1,0 +1,16 @@
+<h1>Admin</h1>
+<ul>
+  <li ng-repeat="product in products">
+    <p>Product: <input type="text" ng-model="product.title"></p>
+    <p>Color: <input type="text" ng-model="product.color"></p>
+    <button type="submit" ng-click="updateProduct( product, $event )">Update Product</button>
+    <button type="submit" ng-click="removeProduct( product._id, $event )">Remove Product</button>
+  </li>
+</ul>
+
+<h2>Add Product</h2>
+<input type="text" placeholder="Title" ng-model="newProduct.title">
+<input type="text" placeholder="Color" ng-model="newProduct.color">
+<button type="submit" ng-click="addProduct( newProduct )">Add Product</button>
+
+<a href="" ui-sref="main">Main</a>
