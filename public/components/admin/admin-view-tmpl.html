@@ -1,8 +1,19 @@
 <h1>Admin</h1>
 <ul>
   <li ng-repeat="product in products">
-    <p>Product: <input type="text" ng-model="product.title"></p>
-    <p>Color: <input type="text" ng-model="product.color"></p>
+    <p>
+      Product: {{ product.title }}
+      <br/>
+      Description: {{ product.description }}
+      <br/>
+      Price: ${{ product.price }}
+    </p>
+    <input type="text" placeholder="Product" ng-model="product.title">
+    <br/>
+    <input type="text" placeholder="Description" ng-model="product.description">
+    <br/>
+    <input type="text" placeholder="Price" ng-model="product.price">
+    <br/>
     <button type="submit" ng-click="updateProduct( product, $event )">Update Product</button>
     <button type="submit" ng-click="removeProduct( product._id, $event )">Remove Product</button>
   </li>

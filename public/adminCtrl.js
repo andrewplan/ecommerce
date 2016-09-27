@@ -1,12 +1,6 @@
 angular.module( 'eCommerceApp' )
     .controller( 'adminCtrl', function( $scope, $state, $stateParams, mainService ) {
 
-      if ( $stateParams ) {
-        $scope.title = $stateParams.title;
-        $scope.color = $stateParams.color;
-        console.log( $scope.title );
-      }
-
       $scope.addProduct = ( newProduct, $event ) => {
         $event.preventDefault();
         mainService.addProduct( newProduct ).then( results => {
