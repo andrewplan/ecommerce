@@ -21,7 +21,8 @@
 
 <h2>Add Product</h2>
 <input type="text" placeholder="Title" ng-model="newProduct.title">
-<input type="text" placeholder="Color" ng-model="newProduct.color">
-<button type="submit" ng-click="addProduct( newProduct )">Add Product</button>
+<input type="text" placeholder="Description" ng-model="newProduct.description">
+<input type="text" placeholder="Price" ng-model="newProduct.price">
+<button type="submit" ng-click="addProduct( newProduct, $event )">Add Product</button>
 
 <a href="" ui-sref="main">Main</a>

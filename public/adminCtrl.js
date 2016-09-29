@@ -1,6 +1,11 @@
 angular.module( 'eCommerceApp' )
     .controller( 'adminCtrl', function( $scope, $state, $stateParams, mainService ) {
 
+      mainService.getProducts().then( results => {
+        $scope.products = results.data;
+        console.log( $scope.products );
+      } );
+
       $scope.addProduct = ( newProduct, $event ) => {
         $event.preventDefault();
         mainService.addProduct( newProduct ).then( results => {

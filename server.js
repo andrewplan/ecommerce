@@ -7,7 +7,7 @@ const app = express();
 const port = 4000;
 
 const corsOptions = {
-  origin: 'http://127.0.0.1:58977'
+  origin: 'http://127.0.0.1:52536'
 };
 
 mongoose.connect( mongoUri );
@@ -18,6 +18,6 @@ mongoose.connection
 app.use( cors( corsOptions ) );
 app.use( json() );
 
-require( './productRoutes' )( app );
+require( './masterRoutes' )( app );
 
 app.listen( port, () => console.log( `Listening on ${ port }`) );
